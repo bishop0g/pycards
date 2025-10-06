@@ -24,7 +24,9 @@ class Card:
 
     def flip_face(self) -> None:
         """
-        All new Cards are marked as faceup == False by default, which controls how each str method of Card outputs. This means any dealing/list.pop/in-and-out methods within Deck need to include flip_face() for toggling the card face when in play; otherwise, cards are "visible" upon being dealt to tableaus, etc.
+        All new Cards are marked as faceup == False by default, which controls how each str method of Card outputs.
+        This means any dealing/list.pop/in-and-out methods within Deck need to include flip_face() for toggling the card face when in play;
+        Otherwise, cards are "visible" while within other hands or piles.
         """
         self.faceup = not self.faceup
 
