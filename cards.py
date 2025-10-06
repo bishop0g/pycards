@@ -1,6 +1,11 @@
 class Card:
     """
-    Defines Card objects as rank int, rank name, suit name, and suit icon. Returns as "Rank of Suit", options for unicode icon and string id for input case matching
+    Defines Card objects.
+    Return types:
+        __str__: "{RANK} of {SUIT}"
+        icon: "{rank value as char}{suit Unicode character}" or "{playing card Unicode character}"
+        card_id: "{rank value as char}{suit name as char}
+
     """
 
     def __init__(self, rank: tuple[int, str], suit: tuple[str, str]):
@@ -24,8 +29,10 @@ class Card:
         """
         self.faceup = not self.faceup
 
-    # Returns Card as "Rank of Suit" if faceup == true
     def __str__(self) -> str:  # pyright: ignore[reportImplicitOverride]
+        """
+        Returns as "Rank of Suit"
+        """
         if not self.faceup:
             return "??? of ???"
         else:
