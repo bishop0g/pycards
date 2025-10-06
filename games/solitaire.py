@@ -1,7 +1,7 @@
 # The game of Solitaire
 
-import cards
-import deck
+# import cards
+# import deck
 
 
 class Solitaire:

@@ -1,6 +1,9 @@
-# Define Ranks as Dict with rank int as Key and rank name as Value
+# The Cards.py class utilize these dicts as tuples within its constructor.
+
 RANKS: dict[int, str] = {
-    1: "Ace",  # Aces are lowest card for the purposes of this assignment
+    # Define Ranks as Dict with rank int as Key and rank name as Value
+    # Ace is defined twice; once as 1 and once as 14, for games where the Ace is the High Card
+    1: "Ace",
     2: "Two",
     3: "Three",
     4: "Four",
@@ -13,9 +16,11 @@ RANKS: dict[int, str] = {
     11: "Jack",
     12: "Queen",
     13: "King",
+    14: "Ace",
 }
-# Define Suits as Dict with suit name as Key and suit unicode as Value
+
 SUITS: dict[str, str] = {
+    # Define Suits as Dict with suit name as Key and suit unicode as Value
     "Hearts": "\u2665",
     "Spades": "\u2660",
     "Diamonds": "\u2666",
